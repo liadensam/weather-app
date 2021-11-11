@@ -66,6 +66,7 @@ Pokud si aplikaci v tomto stavu commitneš na github, přijde ti za chvíli e-ma
 .env
 ```
 4. Kde budeš ID potřebovat, stačí si ho získat pomocí `process.env.REACT_APP_MY_API_ID` a uložit si ho do proměnné, kterou potom použiješ v API URL. 
+5. Po nastavení .env si nezapomeň aplikaci restartovat, aby se změny projevily. 
 
 ## State management 
 
