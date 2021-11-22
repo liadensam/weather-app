@@ -6,7 +6,7 @@ import { formatUnixTime } from "../../utils/functions"
 
 
 const WeatherCurrent =({weather}) => (
-  <div className={weather && Math.round(weather.main.temp)? "weather__current weather__current--cold" : "weather__current"}>
+  <div className={weather && Math.round(weather.main.temp) < 10? "weather__current weather__current--cold" : "weather__current"}>
     <h2 className="weather__city" id="mesto">
       {weather? weather.name : null}, {weather? weather.sys.country : null}
     </h2>
