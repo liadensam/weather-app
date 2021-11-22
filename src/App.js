@@ -44,9 +44,9 @@ const App = () => {
   }, [city]);
 
 
-  // const handleButtonClick = (event) => {
-  //   setCity(event.target.innerText)
-  // }
+  const handleButtonClick = (event) => {
+    setCity(event.target.innerText)
+  }
 
 
   return (
@@ -54,11 +54,11 @@ const App = () => {
       <div className="container">
         <h1>My Weather App</h1>
         <div className="weather">
-           {/* <div className="button-group">
+           <div className="button-group">
             <button className="button" onClick={handleButtonClick}>Reykjavik</button>
             <button className="button" onClick={handleButtonClick}>New York</button>
             <button className="button" onClick={handleButtonClick}>Copenhagen</button>
-          </div> */}
+          </div>
          <WeatherCurrent weather={weather} />
          {forecast?.map((f, index) => ( <WeatherForecast key={index} forecast={f} /> ))}
           

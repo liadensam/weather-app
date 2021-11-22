@@ -25,17 +25,17 @@ const months = [
 ];  
 
 
-const getDayfromUnix = (timestamp) => {
+export const getDayfromUnix = (timestamp) => {
   const date = new Date(timestamp * 1000);
   return `${days[date.getDay()]}, ${months[date.getMonth()]} ${date.getDate()} `;
 };
 
 
-const filterForecast = (array) => {
+export const filterForecast = (array) => {
   return array.filter((_, index) => index % 8 === 0);
 };
 
-const formatUnixTime = (timestamp) => {
+export const formatUnixTime = (timestamp) => {
   const hours = new Date(timestamp * 1000).getHours();
   const minutes = new Date(timestamp * 1000).getMinutes();
   const twoDigitMinutes = minutes.toString().padStart(2, "0");
