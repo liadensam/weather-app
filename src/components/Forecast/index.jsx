@@ -11,7 +11,7 @@ const WeatherForecast =({forecast}) => (
       <div class="forecast__day">{forecast? (getDayfromUnix(forecast.dt)) : null}</div>
       <div class="forecast__icon">
         <img
-          src={`http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png`}
+          src={`http://openweathermap.org/img/wn/${forecast?.weather[0].icon}@2x.png`}
           style={{ height: "100%" }}
           alt={"current weather icon"}
         />
