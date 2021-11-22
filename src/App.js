@@ -1,9 +1,10 @@
 import React, {useState, useEffect} from "react";
 import "./App.css";
-import WeatherCurrent from "./components/WeatherCurrent"
+import WeatherCurrent from "./components/WeatherCurrent";
 import WeatherForecast from "./components/Forecast";
 
-import { filterForecast } from "./utils/functions"
+import { filterForecast } from "./utils/functions";
+import { cities } from "./utils/functions"
 
 
 const API_KEY = process.env.REACT_APP_MY_API_ID;
@@ -44,8 +45,12 @@ const App = () => {
   }, [city]);
 
 
-  const handleButtonClick = (event) => {
-    setCity(event.target.innerText)
+  // const handleButtonClick = (event) => {
+  //   setCity(event.target.innerText)
+  // }
+
+  const cityChange = (e) => {
+    setCity(e.target.value);
   }
 
 
@@ -53,14 +58,32 @@ const App = () => {
     <div className="App">
       <div className="container">
         <h1>My Weather App</h1>
+
+        <div className="select-wrapper">
+          <select
+            className="select"
+            name="cityselect"
+            id="cityselect"
+            value={city}
+            onChange={cityChange}
+          >
+            {cities.map((city) => (
+            <option key={city} value={city}>{city}</option>
+          ))} 
+          </select>
+        </div>
+
+
         <div className="weather">
-           <div className="button-group">
+           {/* <div className="button-group">
             <button className="button" onClick={handleButtonClick}>Reykjavik</button>
             <button className="button" onClick={handleButtonClick}>New York</button>
             <button className="button" onClick={handleButtonClick}>Copenhagen</button>
-          </div>
+          </div> */}
          <WeatherCurrent weather={weather} />
+         <div class="weather__forecast" id="predpoved">
          {forecast?.map((f, index) => ( <WeatherForecast key={index} forecast={f} /> ))}
+         </div>
           
         </div>
       </div>

@@ -6,7 +6,7 @@ import { getDayfromUnix } from "../../utils/functions";
 
 
 const WeatherForecast =({forecast}) => (
-      <div class="weather__forecast" id="predpoved">
+      
     <div class="forecast">
       <div class="forecast__day">{forecast? (getDayfromUnix(forecast.dt)) : null}</div>
       <div class="forecast__icon">
@@ -18,7 +18,6 @@ const WeatherForecast =({forecast}) => (
       </div>
       <div class="forecast__temp">{forecast? (Math.round(forecast.main.temp)) : null} °C</div>
     </div>
-  </div>
 )
 
 export default WeatherForecast;
