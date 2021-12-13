@@ -25,5 +25,5 @@ I created a weather application, where I fetch data (weather forecats for cities
 
 This exercise is not about the styling, but functionality and testing react router and using previous knowledge.
 
-- [Live site]()
+- [Live site](https://film-magazine.netlify.app/)
 - [GitHub Repository](https://github.com/liadensam/film-magazine)
