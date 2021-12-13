@@ -16,7 +16,7 @@ It is important to understand both, but we will take the Functional Programming 
 
 ## Weather App
 
-I created a weather application, where I fetch data (weather forecats for cities for the actual day and for another five days ) from open weather. I am using API key in my .env file. I had to use some functions in order to get the forecats for five days and correct display of hours and date. You can just try it yourself, there is fifty cities saved in a json data and if the temperature is less than ten, the box with the one day forecats will turn blue.
+I created a responsive weather application, where I fetch data (weather forecats for cities for the actual day and for another five days ) from open weather. I am using API key in my .env file. I had to use some functions in order to get the forecats for five days and correct display of hours and date. You can just try it yourself, there is fifty cities saved in a json data and if the temperature is less than ten, the box with the one day forecats will turn blue.
 
 - [Live site](https://fifty-shades-of-weather-days.netlify.app/)
 - [GitHub Repository](https://github.com/liadensam/weather-app)
