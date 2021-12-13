@@ -78,17 +78,18 @@ const months = [
   "Dec",
 ];  
 
-
+//specific unit, function to get it displayed correctly the date
 export const getDayfromUnix = (timestamp) => {
   const date = new Date(timestamp * 1000);
   return `${days[date.getDay()]}, ${months[date.getMonth()]} ${date.getDate()} `;
 };
 
-
+//filter the forecast so I gte five days
 export const filterForecast = (array) => {
   return array.filter((_, index) => index % 8 === 0);
 };
 
+//displayiind the hours for sunset and sunrise correctly
 export const formatUnixTime = (timestamp) => {
   const hours = new Date(timestamp * 1000).getHours();
   const minutes = new Date(timestamp * 1000).getMinutes();
